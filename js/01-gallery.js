@@ -34,13 +34,13 @@ function choosePic(event) {
   return;
   }
 
-  const modalBtn = {
+  const modalWindow = {
     onShow: instance => {
       document.addEventListener('keydown', escBtn);
     },
 }
 
-const instance = basicLightbox.create(`<img src="${event.target.dataset.source}">`, modalBtn);
+const instance = basicLightbox.create(`<img src="${event.target.dataset.source}">`, modalWindow);
 
 
 instance.show()
