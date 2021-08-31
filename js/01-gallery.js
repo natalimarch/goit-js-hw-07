@@ -38,15 +38,6 @@ function choosePic(event) {
     onShow: instance => {
       document.addEventListener('keydown', escBtn);
     },
-    onClose: instance => {
-      document.removeEventListener('keydown', escBtn);
-    },
-    // onShow: instance => {
-    //   document.addEventListener('keydown', enterBtn);
-    // },
-    // onClose: instance => {
-    //   document.removeEventListener('keydown', enterBtn);
-    // }
 }
 
 const instance = basicLightbox.create(`<img src="${event.target.dataset.source}">`, modalBtn);
@@ -57,7 +48,7 @@ instance.show()
 function escBtn(event) {
   if (event.key === 'Escape') {
     instance.close();
-  }
+  } 
 }
 
 // function enterBtn(event) {
